@@ -1,24 +1,22 @@
-import { CssBaseline } from '@nextui-org/react';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+// pages/_document.js
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: any) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return {
-      ...initialProps,
-      styles: <>{initialProps.styles}</>
-    };
-  }
+import { ColorModeScript } from '@chakra-ui/react';
+import NextDocument, { Head, Html, Main, NextScript } from 'next/document';
 
+import theme from '../../styles/theme';
+
+export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@200;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@200;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
@@ -26,5 +24,3 @@ class MyDocument extends Document {
     );
   }
 }
-
-export default MyDocument;

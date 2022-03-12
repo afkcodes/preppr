@@ -1,26 +1,46 @@
-import { Button } from '@nextui-org/react';
+import { Box, Button, Input, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="flex justify-center items-center h-102">
-      <div className="flex flex-col gap-6 text-center">
-        <h3 className="text-5xl font-bold">What are you learning today?</h3>
-        <p className="text-xl">Learn with no extra efforts and clutters.</p>
-        <div className="flex gap-1 w-full">
-          <input
+    <Box className="flex justify-center items-center h-102">
+      <Box className="flex flex-col gap-6 text-center">
+        <Text as="h3" className="text-6xl font-bold">
+          What are you learning today?
+        </Text>
+        <Text className="text-xl" as="p">
+          Learn with no extra efforts and clutters.
+        </Text>
+        <Box className="flex gap-1 w-full">
+          <Input
             type="text"
             name="main-search"
             id="main-search"
-            className=" px-6  w-full  placeholder:text-lg text-lg placeholder:font-medium font-medium rounded-sm"
             placeholder="Explore Tutorials"
+            size="lg"
+            variant="filled"
+            p={8}
+            // borderColor="red.500"
+            borderWidth={2}
+            borderRadius={2}
+            _active={{ borderColor: 'red.500' }}
+            _focus={{ borderColor: 'red.500' }}
           />
-          <Button auto className="p-8 text-lg font-medium rounded-sm">
+          <Button
+            p={8}
+            bg="teal.900"
+            borderWidth={1}
+            borderRadius={2}
+            borderColor="teal.900"
+            _hover={{ bg: 'teal.800' }}
+            _active={{ bg: 'teal.900', transform: 'scale(0.98)' }}
+            color="white"
+          >
             Search
           </Button>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
