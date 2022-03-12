@@ -1,16 +1,16 @@
 import '../../styles/globals.css';
 
-import { NextUIProvider } from '@nextui-org/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 
-import themes from '../../styles/themes';
+import theme from '../../styles/theme';
 
 // eslint-disable-next-line no-unused-vars
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <NextUIProvider theme={themes}>
+    <ChakraProvider theme={theme}>
       <Component />
-    </NextUIProvider>
+    </ChakraProvider>
   );
 }
 
