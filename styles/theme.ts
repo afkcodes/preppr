@@ -20,7 +20,7 @@ const theme = extendTheme({
     body: "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto'"
   },
   colors: {
-    red: {
+    prepprRed: {
       '900': '#ea5455',
       '800': '#ec6566',
       '700': '#ee7677',
@@ -30,7 +30,7 @@ const theme = extendTheme({
       '300': '#f7bbbb',
       '200': '#f9cccc',
       '100': '#fbdddd',
-      '50': '#fdeeee8'
+      '50': '#fdeee8'
     },
     black: {
       '900': '#0f0f0f',
@@ -44,7 +44,7 @@ const theme = extendTheme({
       '100': '#cfcfcf',
       '50': '#e7e7e7'
     },
-    yellow: {
+    preppryellow: {
       '900': '#ffb400',
       '800': '#ffbc1a',
       '700': '#ffc333',
@@ -56,17 +56,17 @@ const theme = extendTheme({
       '100': '#fff0cc',
       '50': '#fff8e6'
     },
-    teal: {
-      900: '#0c9ca4',
-      800: '#27a7ae',
-      700: '#42b2b8',
-      600: '#5dbdc2',
-      500: '#78c8cc',
-      400: '#93d3d6',
-      300: '#aedee0',
-      200: '#c9e9ea',
-      100: '#e4f4f4',
-      50: '#e7f5f6'
+    prepprTeal: {
+      900: '#0a7d83',
+      800: '#238a8f',
+      700: '#3b979c',
+      600: '#54a4a8',
+      500: '#6cb1b5',
+      400: '#85bec1',
+      300: '#9dcbcd',
+      200: '#b6d8da',
+      100: '#cee5e6',
+      50: '#e7f2f3'
     }
   },
   config,
