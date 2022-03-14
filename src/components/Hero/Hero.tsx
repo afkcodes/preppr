@@ -1,46 +1,55 @@
-import { Box, Button, Input, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Input, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const Hero = () => {
   return (
-    <Box className="flex justify-center items-center h-102">
-      <Box className="flex flex-col gap-6 text-center">
-        <Text as="h3" className="text-6xl font-bold">
-          What are you learning today?
-        </Text>
-        <Text className="text-xl" as="p">
-          Learn with no extra efforts and clutters.
-        </Text>
-        <Box className="flex gap-1 w-full">
+    <Flex justifyContent="center" alignItems={{ base: 'flex-start', md: 'center' }} w="full" h="lg">
+      <Flex justifyContent="center" alignItems="center" flexDirection="column" textAlign="center">
+        <Box py={8}>
+          <Text as="h3" fontWeight="bold" fontSize={50} color="white">
+            What are you learning today?
+          </Text>
+          <Text fontSize={18} as="p" color="white">
+            Learn with no extra efforts and clutters.
+          </Text>
+        </Box>
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          w="full"
+          gap={2}
+          direction={{ base: 'column', md: 'row' }}
+        >
           <Input
             type="text"
-            name="main-search"
-            id="main-search"
             placeholder="Explore Tutorials"
             size="lg"
-            variant="filled"
             p={8}
-            // borderColor="red.500"
+            borderColor="white"
             borderWidth={2}
             borderRadius={2}
-            _active={{ borderColor: 'red.500' }}
-            _focus={{ borderColor: 'red.500' }}
+            fontWeight="semibold"
+            color="white"
+            _active={{ borderColor: 'white' }}
+            _focus={{ borderColor: 'white' }}
+            _hover={{ borderColor: 'white' }}
+            _placeholder={{ color: 'white', fontWeight: 'semibold' }}
           />
           <Button
             p={8}
-            bg="teal.900"
-            borderWidth={1}
+            bg="white"
+            borderWidth={2}
             borderRadius={2}
-            borderColor="teal.900"
-            _hover={{ bg: 'teal.800' }}
-            _active={{ bg: 'teal.900', transform: 'scale(0.98)' }}
-            color="white"
+            borderColor="white"
+            _hover={{ bg: 'white' }}
+            _active={{ bg: 'white', transform: 'scale(0.98)' }}
+            color="teal"
           >
             Search
           </Button>
-        </Box>
-      </Box>
-    </Box>
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
 
